@@ -5,6 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Showcase</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #121212;
+    color: #E0E0E0;
+    font-size: 16px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    color: #FFFFFF;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #BB86FC;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.project {
+    margin: 40px 0;
+    padding: 40px;
+    background-color: #1E1E1E;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.project-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 15px 30px; /* Increased padding for larger buttons */
+    background-color: #BB86FC;
+    color: #121212;
+    border: none;
+    border-radius: 8px; /* Slightly larger border radius */
+    font-size: 18px; /* Increased font size */
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s; /* Added transform for hover effect */
+}
+
+.project-btn:hover {
+    background-color: #3700B3;
+    transform: scale(1.05); /* Slightly enlarges button on hover */
+}
+
+.project-description {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #2A2A2A;
+    border-radius: 5px;
+    line-height: 1.6;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #B0B0B0;
+    font-size: 14px;
+}
+    </style>
 </head>
 <body>
     <header>
@@ -56,6 +128,15 @@
     <p></p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js">
+        function toggleDescription(id) {
+    const description = document.getElementById(id);
+    if (description.style.display === "none" || description.style.display === "") {
+        description.style.display = "block";
+    } else {
+        description.style.display = "none";
+    }
+}
+    </script>
 </body>
 </html>
